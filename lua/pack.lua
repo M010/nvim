@@ -20,8 +20,19 @@ require("lazy").setup({
   'nvim-lua/plenary.nvim',
   'nvim-treesitter/nvim-treesitter',
   {'rose-pine/neovim', name = 'rose-pine' },
-  'ThePrimeagen/harpoon',
+  'ThePrimeagen/harpoon', -- Plugin for fast switching
   { 'Civitasv/cmake-tools.nvim' },
+{
+  "NeogitOrg/neogit",
+  dependencies = {
+    "nvim-lua/plenary.nvim",         -- required
+    "sindrets/diffview.nvim",        -- optional - Diff integration
+
+    -- Only one of these is needed.
+    "nvim-telescope/telescope.nvim", -- optional
+  },
+  config = true
+},
   {
     "williamboman/mason.nvim",
     lazy = false,
