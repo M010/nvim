@@ -23,7 +23,11 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
+<<<<<<< Updated upstream
     ensure_installed = { "clangd", "lua_ls", "pylsp" },  -- Ensure clangd is installed
+=======
+    ensure_installed = { "clangd" },  -- Ensure clangd is installed
+>>>>>>> Stashed changes
     handlers = {
         lsp_zero.default_setup,
         lua_ls = function()
@@ -32,13 +36,21 @@ require("mason-lspconfig").setup({
         end,
         clangd = function()
             require('lspconfig').clangd.setup {
+<<<<<<< Updated upstream
                 cmd = { 'clangd' },
                 -- , '--query-driver', '/home/moh/dev/ngfw-draft/.builds/fwaas_qemu_x86_64_release/host/bin/x86_64-buildroot-linux-gnu-g++' },
+=======
+                cmd = { 'clangd', '--query-driver', '/home/moh/dev/ngfw/.builds/fwaas-vm-release/x86_64-buildroot-linux-gnu-g++' },
+>>>>>>> Stashed changes
                 init_options = {
                     clangdFileStatus = true,
                     clangdSemanticHighlighting = true,
                 },
+<<<<<<< Updated upstream
                 filetypes = { 'c', 'cpp', 'cxx', 'cc', 'hpp' },
+=======
+                filetypes = { 'c', 'cpp', 'cxx', 'cc' },
+>>>>>>> Stashed changes
             }
         end,
     },
