@@ -1,7 +1,6 @@
 return {
   "folke/which-key.nvim",
   'nvim-lua/plenary.nvim',
-  'ThePrimeagen/harpoon', -- Plugin for fast switching
   {
     "NeogitOrg/neogit",
     dependencies = {
@@ -30,10 +29,10 @@ return {
       { "hrsh7th/cmp-nvim-lsp" },
     },
   },
- {
+  {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v3.x",
     config = false,
     lazy = true,
   }
-  }
+}
