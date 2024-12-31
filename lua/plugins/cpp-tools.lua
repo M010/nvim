@@ -1,4 +1,9 @@
-require("cmake-tools").setup {
+return {
+  {
+    "Civitasv/cmake-tools.nvim",
+    config = function()
+      require("cmake-tools").setup(
+{
   cmake_command = "cmake", -- this is used to specify cmake command path
   cmake_regenerate_on_save = true, -- auto generate when save CMakeLists.txt
   cmake_generate_options = { "-DCMAKE_EXPORT_COMPILE_COMMANDS=1" }, -- this will be passed when invoke `CMakeGenerate`
@@ -65,5 +70,9 @@ require("cmake-tools").setup {
     enabled = true, -- show cmake execution progress in nvim-notify
     spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }, -- icons used for progress display
     refresh_rate_ms = 100, -- how often to iterate icons
+  },
+}
+      )
+    end,
   },
 }
